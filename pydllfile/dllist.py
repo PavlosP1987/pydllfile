@@ -106,7 +106,7 @@ class DoubleLinkedListFile(object):
         self.link_size = link_size
 
     def read_from_node(self, pos):
-        if pos == 0:
+        if pos <= 0:
             raise Exception("invalid position. must be > 0")
         node = self.fd.read_node(pos)
         elem = Element(self.fd, pos + Node.node_size(), link_size=self.link_size)
@@ -115,8 +115,6 @@ class DoubleLinkedListFile(object):
         return node, elem
 
     def read_elem(self, pos):
-        if pos == 0:
-            raise Exception("invalid position. must be > 0")
         node_pos = pos - Node.node_size()
         return self.read_from_node(node_pos)
 
