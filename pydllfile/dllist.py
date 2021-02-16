@@ -19,7 +19,9 @@ LINK_SIZE = 8
 
 
 class Element(object):
-    """double linked list element"""
+    """double linked list element.
+    dont use directly.
+    use high level API in DoubleLinkedListFile to manipulate."""
 
     def __init__(self, fd, pos=None, data=None, prev=0, succ=0, link_size=LINK_SIZE):
         self.fd = fd
@@ -60,17 +62,10 @@ class Element(object):
         self.fd.write(to_bytes(self.succ, self.link_size))
         self.write_content()
 
-    # following the high level API to use directly
-    # to update the content of an element
-    # all other tasks should be done via DoubleLinkedListFile
-    # see also write_elem there
-
     def write_content(self):
         self.fd.seek(self.pos + self.elem_meta_size(), os.SEEK_SET)
         if self.data != None and len(self.data) > 0:
             self.fd.write(self.data)
-
-    # end-of high level API to use directly
 
     def insert_pos(self, elem_pos):
         elem = self._read(elem_pos)
