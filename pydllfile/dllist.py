@@ -132,12 +132,16 @@ class DoubleLinkedListFile(object):
         return node, elem
 
     def remove_elem(self, node, elem, merge_free=True):
+        """removes an element.
+        this doesnt update existing already loaded prev and succ elements."""
         elem.remove()
         self.fd.free(node, merge_free=merge_free)
 
     def insert_elem(
         self, elem_data, other_elem=None, before=True, equal_size_match=False
     ):
+        """inserts an element.
+        this doesnt update all existing already loaded prev and succ elements."""
         elem = Element(self.fd, data=elem_data, link_size=self.link_size)
         node = self.fd.alloc(elem.len_total(), equal_size_match=equal_size_match)
 
