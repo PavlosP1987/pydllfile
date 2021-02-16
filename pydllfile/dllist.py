@@ -2,6 +2,10 @@ import os
 
 from pyheapfile.heap import Node, to_bytes, from_bytes
 
+# link_size == 8
+# ==>
+# 2**(8*8) == 18446744073709551616 bytes
+
 LINK_SIZE = 8
 
 ## todo
@@ -18,9 +22,6 @@ class Element(object):
     """double linked list element"""
 
     def __init__(self, fd, pos=None, data=None, prev=0, succ=0, link_size=LINK_SIZE):
-        # link_size == 8
-        # ==>
-        # 2**(8*8) == 18446744073709551616 bytes
         self.fd = fd
         self.link_size = link_size
         self.pos = pos
