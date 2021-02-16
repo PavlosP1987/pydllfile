@@ -167,9 +167,9 @@ class DoubleLinkedListFile(object):
             elem.write_content()
         return node, elem
 
-    def remove_elem(self, node, elem):
+    def remove_elem(self, node, elem, merge_free=True):
         elem.remove()
-        self.fd.free(node)
+        self.fd.free(node, merge_free=merge_free)
 
     def insert_elem(
         self, elem_data, other_elem=None, before=True, equal_size_match=False

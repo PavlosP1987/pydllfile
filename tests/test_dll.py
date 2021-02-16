@@ -59,4 +59,18 @@ class HeapTestCase(unittest.TestCase):
             pos = elm.succ
             idx += 1
 
+        el1.data = "_11".encode()
+        dlf.write_elem(nd1, el1)
+        el2.data = "_00".encode()
+        dlf.write_elem(nd2, el2)
+
+        test_data = ["_00", "_11"]
+        idx = 0
+
+        while pos != 0:
+            nod, elm = dlf.read_elem(pos)
+            self.assertEqual(elm.data.decode(), test_data[idx])
+            pos = elm.succ
+            idx += 1
+
         hpf.close()
