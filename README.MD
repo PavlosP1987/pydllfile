@@ -13,17 +13,15 @@
 
 | name | size / value | description |
 | --- | --- | --- | 
-| magik | 4 byte 0x_2_bad_dead | header magic number byte sequence for node structure |
-| prev | x bytes | previous element |
-| succ | x bytes | next ele,ment |
+| prev | xpos bytes | previous element |
+| succ | xpos bytes | next element |
 | data | x bytes | data area |
-
 
 
 ## limitation
 
+- xpos default == 8 bytes ==> 2**(8*8) == 18446744073709551616 bytes total file size
 - 
-
 
 
 # Platform
