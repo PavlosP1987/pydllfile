@@ -1,26 +1,10 @@
 import os
 
-from pyheapfile.heap import Node
+from pyheapfile.heap import Node, to_bytes, from_bytes
 
 LINK_SIZE = 8
 
-## todo refactor with heapfile
-def to_bytes(buf, blen=1):
-    rc = []
-    for i in range(0, blen):
-        b = buf & 0xFF
-        rc.append(b)
-        buf >>= 8
-    return bytes(reversed(rc))
-
-
-def from_bytes(buf):
-    rc = 0
-    for i in range(0, len(buf)):
-        rc <<= 8
-        rc |= buf[i]
-    return rc
-
+## todo
 
 ## refactor heapfile handling
 ## - calc of offset to write to in heapfile
