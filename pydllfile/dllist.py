@@ -1,21 +1,7 @@
 import os
-
 from pyheapfile.heap import Node, to_bytes, from_bytes
 
-# link_size == 8
-# ==>
-# 2**(8*8) == 18446744073709551616 bytes
-
 LINK_SIZE = 8
-
-## todo
-
-## refactor heapfile handling
-## - calc of offset to write to in heapfile
-## - check boundery
-## - from_buffer/to_buffer methods
-
-## end-of todo
 
 
 class Element(object):
