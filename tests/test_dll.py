@@ -48,4 +48,15 @@ class HeapTestCase(unittest.TestCase):
             pos = elm.succ
             idx += 1
 
+        dlf.remove_elem(nd0, el0)
+
+        test_data = ["zero", "two"]
+        idx = 0
+
+        while pos != 0:
+            nod, elm = dlf.read_elem(pos)
+            self.assertEqual(elm.data.decode(), test_data[idx])
+            pos = elm.succ
+            idx += 1
+
         hpf.close()
