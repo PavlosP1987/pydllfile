@@ -1,7 +1,7 @@
 import unittest
 
-from pyheapfile.heap import HeapFile, Node
-from pydllfile.dllist import DoubleLinkedListFile, Element
+from pyheapfile.heap import HeapFile
+from pydllfile.dllist import DoubleLinkedListFile
 
 fnam = "mytest.hpf"
 
