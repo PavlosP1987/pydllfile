@@ -150,14 +150,14 @@ class DoubleLinkedListFile(object):
 
         node.used = elem.len_total()
         self.fd.write_node(node)
+
         elem.pos = node.id + node.node_size()
+
         if other_elem != None:
             if before == True:
                 elem.insert(other_elem)
             else:
                 elem.insert_after(other_elem)
         else:
-            elem.prev = 0
-            elem.succ = 0
             elem.write()
         return node, elem, other_elem
