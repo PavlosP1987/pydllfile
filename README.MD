@@ -9,6 +9,9 @@
 
 # memory / file layout
 
+a double linked element node resides inside a heap node as data part.
+
+
 ## general node layout
 
 | name | size / value | description |
