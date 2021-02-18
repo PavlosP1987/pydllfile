@@ -29,10 +29,10 @@ see also [`pyheapfile`](https://github.com/kr-g/pyheapfile/) for layout.
 
 | [binary prefix](https://en.wikipedia.org/wiki/Binary_prefix) | size | unit |
 | --- | --- | --- |
-| 2**20 | 17592186044416 | MB |
-| 2**30 | 17179869184 | GB |
-| 2**40 | 16777216 | TB |
-| 2**50 | 16384 | PB |
+| 2**20 | 17.592.186.044.416 | MB |
+| 2**30 | 17.179.869.184 | GB |
+| 2**40 | 16.777.216 | TB |
+| 2**50 | 16.384 | PB |
 | 2**60 | 16 | EB |
 
 - the default can be changed by creating `DoubleLinkedListFile` with a different `link_size`
