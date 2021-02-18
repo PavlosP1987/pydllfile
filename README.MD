@@ -28,7 +28,7 @@ see also [`pyheapfile`](https://github.com/kr-g/pyheapfile/) for layout.
 == 18.446.744.073.709.551.616 bytes total file size (default)
 
 | binary prefix | size | unit |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | 2^20 | 17592186044416 | MB |
 | 2^30 | 17179869184 | GB |
 | 2^40 | 16777216 | TB |
