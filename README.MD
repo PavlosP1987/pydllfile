@@ -27,7 +27,7 @@ see also [`pyheapfile`](https://github.com/kr-g/pyheapfile/) for layout.
 - xpos (default) == 8 bytes ==> 2^(8*8) 
 == 18.446.744.073.709.551.616 bytes total file size (default)
 
-| binary prefix | size | unit |
+| [binary prefix](https://en.wikipedia.org/wiki/Binary_prefix) | size | unit |
 | --- | --- | --- |
 | 2^20 | 17592186044416 | MB |
 | 2^30 | 17179869184 | GB |
@@ -35,7 +35,7 @@ see also [`pyheapfile`](https://github.com/kr-g/pyheapfile/) for layout.
 | 2^50 | 16384 | PB |
 | 2^60 | 16 | EB |
 
-- [binary prefix](https://en.wikipedia.org/wiki/Binary_prefix)
+- 
 
 
 # Platform
