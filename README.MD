@@ -9,7 +9,8 @@
 
 # memory / file layout
 
-a double linked element node resides inside a heap node as data part.
+a double linked element node resides inside a heap node as data part. 
+see also [`pyheapfile`](https://github.com/kr-g/pyheapfile/) for layout.
 
 
 ## general node layout
@@ -37,7 +38,7 @@ Tested on Python3, and Linux.
 alpha state.
 the API or logical call flow might change without prior notice.
 
-read [`CHANGELOG`](https://github.com/kr-g/pyheapfile/blob/main/CHANGELOG.MD)
+read [`CHANGELOG`](https://github.com/kr-g/pydllfile/blob/main/CHANGELOG.MD)
 for latest, or upcoming news.
 
 
