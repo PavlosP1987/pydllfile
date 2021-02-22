@@ -5,10 +5,12 @@
 ## next release v0.0.1 
 
 - first release
+- 
 
 
 ## backlog
 
+- more testcases
 - refactor heapfile handling
   - calc of offset to write to in heapfile
   - check boundery

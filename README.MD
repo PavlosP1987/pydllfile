@@ -36,6 +36,7 @@ see also [`pyheapfile`](https://github.com/kr-g/pyheapfile/) for layout.
 | 2**60 | 16 | EB |
 
 - the default can be changed by creating `DoubleLinkedListFile` with a different `link_size`
+- see other limits also here [`pyheapfile`](https://github.com/kr-g/pyheapfile/)
 -
 
 
