@@ -138,12 +138,17 @@ class DoubleLinkedListFile(object):
         self.fd.free(node, merge_free=merge_free)
 
     def insert_elem(
-        self, elem_data, other_elem=None, before=True, equal_size_match=False
+        self, elem_data=None, min_data_alloc=None, other_elem=None, before=True, equal_size_match=False
     ):
         """inserts an element.
         this doesnt update all existing already loaded prev and succ elements."""
         elem = Element(self.fd, data=elem_data, link_size=self.link_size)
-        node = self.fd.alloc(elem.len_total(), equal_size_match=equal_size_match)
+        
+        alloc_required = elem.len_total()
+        if min_data_alloc != None:
+            alloc_required = max( min_data_alloc, alloc_required )
+        
+        node = self.fd.alloc(alloc_required, equal_size_match=equal_size_match)
 
         if node == None or node.id == 0:
             raise Exception("invalid position. must be > 0")
