@@ -4,7 +4,8 @@
 
 # pydllfile - double linked list in heap file storage
 
-`pydllfile` is a file persistent double linked list
+`pydllfile` implements a file persistent 
+[`double linked list`](https://en.wikipedia.org/wiki/Doubly_linked_list)
 
 
 # memory / file layout
