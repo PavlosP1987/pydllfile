@@ -12,7 +12,8 @@
 
 - more testcases
 - refactor heapfile handling
-  - calc of offset to write to in heapfile
+  - calc of offset to write to in [`pyheapfile`](https://github.com/kr-g/pyheapfile/)
   - check boundery
   - from_buffer/to_buffer methods
+  
 
