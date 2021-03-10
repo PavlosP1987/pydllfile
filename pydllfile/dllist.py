@@ -17,6 +17,21 @@ class Element(object):
         self.succ = succ
         self.data = data
 
+    def __repr__(self):
+        return (
+            self.__class__.__name__
+            + "("
+            + " pos: "
+            + hex(self.pos)
+            + " prev: "
+            + hex(self.prev)
+            + " succ: "
+            + hex(self.succ)
+            # + " data: "
+            # + str(self.data)
+            + " )"
+        )
+
     def elem_meta_size(self):
         return self.link_size * 2
 
