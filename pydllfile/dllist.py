@@ -72,12 +72,20 @@ class Element(object):
         elem = self._read(elem_pos)
         return self.insert(elem)
 
-    def insert(self, elem):
-        """insert the element before other in the list,
-        this does not aquire space from the underlying heap"""
+    def insert_elem_before(self, elem):
         self.prev = elem.prev
         self.succ = elem.pos
         elem.prev = self.pos
+
+    def insert_elem_after(self, elem):
+        elem.prev = self.pos
+        elem.succ = self.succ
+        self.succ = elem.pos
+
+    def insert(self, elem):
+        """insert the element before other in the list and update file,
+        this does not aquire space from the underlying heap"""
+        self.insert_elem_before(elem)
         elem.write()
         self.write()
         return self

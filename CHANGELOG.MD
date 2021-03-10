@@ -4,6 +4,7 @@
 ## next release v0.0.2
 
 - __repr__ added
+- refactored insert element
 - 
 
 
