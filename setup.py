@@ -27,7 +27,7 @@ def find_projectname():
 projectname = find_projectname()
 file = os.path.join(projectname, "__init__.py")
 
-version = "v0.0.1"
+version = find_version(file)
 
 setuptools.setup(
     name=projectname,
@@ -46,7 +46,7 @@ setuptools.setup(
     ),
     keywords="double linked list file storage memory management pyheapfile",
     install_requires=[
-        "pyheapfile>=0.0.2",
+        "pyheapfile>=0.0.3",
     ],
     classifiers=[
         "Development Status :: 3 - Alpha",

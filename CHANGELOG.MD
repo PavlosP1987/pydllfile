@@ -5,6 +5,7 @@
 
 - __repr__ added
 - refactored insert element
+- added hexdump tool
 - 
 
 
