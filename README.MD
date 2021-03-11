@@ -49,6 +49,7 @@ see also [`pyheapfile`](https://github.com/kr-g/pyheapfile/) for layout.
 
 ## remark on hexdump tool
 
+hexdump tool raise error when configured not properly. use valid hex address for node and link.
 the internal hexdump tool for dumping single elements nodes from the dllfile can be called with:
 
 
