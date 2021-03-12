@@ -1,6 +1,11 @@
 
 # changelog
 
+## next release v0.0.3
+
+-
+
+
 ## release v0.0.2
 
 - __repr__ added
