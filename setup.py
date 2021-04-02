@@ -46,7 +46,7 @@ setuptools.setup(
     ),
     keywords="double linked list file storage memory management pyheapfile",
     install_requires=[
-        "pyheapfile>=0.0.3",
+        "pyheapfile>=0.0.4",
     ],
     classifiers=[
         "Development Status :: 3 - Alpha",
