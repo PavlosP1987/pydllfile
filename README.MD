@@ -82,6 +82,11 @@ the internal hexdump tool for dumping single elements nodes from the dllfile can
       -ho, --header_only    prints only header, no data.
 
 
+# Related Projects
+
+search for topic [`pyheapfile`](https://github.com/topics/pyheapfile) 
+on github to explore related tools/ modules.
+
 
 # Platform
 
